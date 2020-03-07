@@ -19,7 +19,7 @@ spec:
     checkout scm
       container('builder') {
         sh 'chmod 777 mvnw'
-        sh './mvnw clean install'
+        sh './mvnw clean install -B -U'
       }
     }
   }
