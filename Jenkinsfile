@@ -18,6 +18,7 @@ spec:
     stage('Build and test') {
     checkout scm
       container('builder') {
+        sh 'chmod 777 mvnw'
         sh './mvnw clean install'
       }
     }
